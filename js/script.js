@@ -13,42 +13,37 @@ $(document).ready(function() {
     });
         
     function questionOne(q1Result){
-        if (q1Result === "Reading"){
+        if (q1Result === "purple"){
             return 1;
         }
-        else if (q1Result === "Coding"){
+        else if (q1Result === "blue"){
             return 2;
         }
-        else if (q1Result === "Sports"){
+        else if (q1Result === "green"){
             return 3;
-        }
-        else if (q1Result === "Designing"){
-            return 4;
         }
     }
     
     function questionTwo(q2Result){
-        if (q2Result === "Pancakes"){
+        if (q2Result === "french fries"){
             return 1;
         }
-        else if (q2Result === "Waffles"){
+        else if (q2Result === "mash patotes"){
             return 2;
         }
-        else if (q2Result === "French Toast"){
+        else if (q2Result === "green peas"){
             return 3;
         }
     }
     
+    
     function questionThree(q3Result){
-        if (q3Result.length >= 3){
-            return 1;
+        if(q3Result ==="iphone"){
+            return 3;
         }
-        else if (q3Result.length >= 6){
+        else if (q3Result ==="android"){
             return 2;
         }
-        else if (q3Result.length > 6) {
-            return 3;
-        }  
         
     }
     
