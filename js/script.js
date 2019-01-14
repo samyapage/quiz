@@ -1,4 +1,5 @@
 /* global $ */
+var name = $("#name").val();
 
 $(document).ready(function() {
     $("button").click(function() {
@@ -22,18 +23,26 @@ $(document).ready(function() {
         else if (q1Result === "green"){
             return 3;
         }
+        else {
+             return 4;
+         }
     }
     
     function questionTwo(q2Result){
-        if (q2Result === "french fries"){
+        var standardized = q2Result.toLocaleLowerCase().replace(' ', '');
+        console.log(standardized);
+        if (standardized === "frenchfries"){
             return 1;
         }
-        else if (q2Result === "mash patotes"){
+        else if (standardized === "mashpatotes"){
             return 2;
         }
-        else if (q2Result === "green peas"){
+        else if (standardized === "greenpeas"){
             return 3;
         }
+        else {
+             return 4;
+         }
     }
     
     
@@ -44,6 +53,9 @@ $(document).ready(function() {
         else if (q3Result ==="android"){
             return 2;
         }
+        else {
+             return 4;
+         }
         
     }
     
@@ -57,11 +69,13 @@ $(document).ready(function() {
           return "Instagram";
      }
      
-     else if(totalScore> 6){
+     else if(totalScore> 6 && totalScore <=  10){
         return "Facebook";
      }
           
-      
+      else {
+             return name + ", you belong at youtube";
+         }
   }
 
 
